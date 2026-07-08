@@ -117,15 +117,26 @@ if (contactForm) {
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.nav-bar');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+if (menuIcon && navbar) {
+    menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    };
 
-// Sayfa kaydırıldığında menüyü kapat
-window.onscroll = () => {
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
+    // Linke tıklandığında menüyü kapat
+    const navLinks = navbar.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuIcon.classList.remove('bx-x');
+            navbar.classList.remove('active');
+        });
+    });
+
+    // Sayfa kaydırıldığında menüyü kapat
+    window.addEventListener('scroll', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+}
 
 
