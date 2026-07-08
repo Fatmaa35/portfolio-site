@@ -48,7 +48,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1.3" />
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
@@ -65,6 +65,11 @@
             <a href="#resume">Deneyim</a>
             <a href="assets/docs/CV_.pdf" target="_blank" class="cv-link">CV</a>
             <a href="#contact">İletişim</a>
+            <div class="lang-switch">
+                <a href="index.html" class="lang-btn active">TR</a>
+                <span class="lang-divider">|</span>
+                <a href="index-en.html" class="lang-btn">EN</a>
+            </div>
         </nav>
 
     </header>
@@ -211,6 +216,32 @@
                         <i class='bx bx-info-circle'></i> Detayları İncele
                     </a>
                     <a href="https://github.com/gokdeniz001/yolarkadasim-web/tree/surum/yolarkadasim-hazir" target="_blank" class="prj-btn">
+                        <i class='bx bxl-github'></i> Kodları İncele
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: Liman Yönetim Sistemi -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class='bx bx-anchor'></i>
+                        <h3>Akıllı Liman Yönetim Sistemi</h3>
+                        <span class="project-tag">Veritabanı / Full-Stack</span>
+                    </div>
+                    <p>
+                        Veritabanı Yönetimi dersi kapsamında, ASP.NET Core Web API, React (Vite) ve SQL Server kullanılarak geliştirilen; canlı kapasite analizi, interaktif harita ve yapay zeka destekli planlama gerçekleştirebilen uçtan uca bir Akıllı Liman Yönetim Sistemidir.
+                    </p>
+                    <div class="project-tech">
+                        <i class='bx bx-code-alt'></i>
+                        <strong>Teknolojiler:</strong> ASP.NET Core, React, SQL Server, Dapper ORM
+                    </div>
+                </div>
+                <div class="project-btns">
+                    <a href="#" class="prj-btn prj-details-btn" data-project="liman-yonetim">
+                        <i class='bx bx-info-circle'></i> Detayları İncele
+                    </a>
+                    <a href="https://github.com/Fatmaa35/PortManagementSystem" target="_blank" class="prj-btn">
                         <i class='bx bxl-github'></i> Kodları İncele
                     </a>
                 </div>
@@ -527,6 +558,49 @@
                         <li><strong>Veritabanı:</strong> MySQL / MariaDB</li>
                         <li><strong>Web Server:</strong> Apache (XAMPP)</li>
                         <li><strong>Harita & Görselleştirme:</strong> Leaflet.js, Leaflet Routing Machine, Chart.js</li>
+                    </ul>
+                `,
+                'liman-yonetim': `
+                    <h2>⚓ Akıllı Liman Yönetim Sistemi – Yapay Zekâ Destekli Operasyon Analitiği</h2>
+                    <p>
+                        Veritabanı Yönetimi dersi kapsamında geliştirdiğimiz Akıllı Liman Yönetim Sistemi projesi, liman operasyonlarının dijitalleştirilmesi ve akıllı veri analitiği ile optimize edilmesini amaçlayan uçtan uca bir full-stack yazılım ürünüdür.
+                    </p>
+                    <p>
+                        Projenin ilk aşamasında liman operasyonları detaylıca analiz edilerek sistem senaryoları oluşturulmuş, ardından ER (Varlık-İlişki) diyagramı tasarlanmıştır. Veritabanı yapısı 3. Normal Form (3NF) kurallarına uygun olarak normalize edilerek veri tekrarı en aza indirilmiş, veri bütünlüğü ve tutarlılığı en üst düzeye çıkarılmıştır.
+                    </p>
+
+                    <div style="margin: 2.5rem 0; text-align: center;">
+                        <video controls style="width: 100%; max-width: 700px; border-radius: 1.5rem; border: 1px solid rgba(0, 255, 204, 0.3); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); outline: none;">
+                            <source src="assets/portmanagement.mp4" type="video/mp4">
+                            Tarayıcınız video etiketini desteklemiyor.
+                        </video>
+                    </div>
+
+                    <h3>💡 Öne Çıkan Özellikler</h3>
+                    <ul>
+                        <li><strong>İnteraktif Türkiye Haritası & Canlı Kapasite Analizi:</strong> Giriş ekranında pulsing neon pinlerle Türkiye aktif limanlar haritası, limanların üzerine gelindiğinde hesaplanan anlık doluluk oranları ve kuş bakışı rıhtım yerleşimi.</li>
+                        <li><strong>Yapay Zekâ Destekli Analizler:</strong> Gemini API entegrasyonu ile ETA (Tahmini Varış Zamanı) bazlı gemi önceliklendirme, bozulabilir yüklerin tespiti ve öncelikli tahliyesi, tehlikeli yük risk analizi, demuraj maliyet optimizasyonu ve rıhtım uygunluk kontrolü.</li>
+                        <li><strong>Simülasyon Mekanizması:</strong> İnternet veya API erişiminin kesildiği senaryolarda operasyonların aksamadan devam edebilmesi için kural tabanlı yerel simülasyon modülü.</li>
+                        <li><strong>Tam Katmanlı Yazılım Mimarisi:</strong> Veritabanı yapısını destekleyen .NET tabanlı backend servisleri, Dapper ORM kullanımı ve React tabanlı modern frontend kullanıcı arayüzü.</li>
+                    </ul>
+
+                    <h3>👥 Ekip Arkadaşlarım</h3>
+                    <p>
+                        Bu projenin başarıyla hayata geçmesinde emeği olan tüm ekip arkadaşlarıma teşekkür ederim:
+                    </p>
+                    <div class="team-list">
+                        <span class="team-member">Aleyna Övez</span>
+                        <span class="team-member">Güler Kıray</span>
+                        <span class="team-member">Kadir Değer</span>
+                        <span class="team-member">Sümeyye Köse</span>
+                    </div>
+
+                    <h3>⚙️ Kullanılan Teknolojiler</h3>
+                    <ul>
+                        <li><strong>Backend:</strong> ASP.NET Core Web API, Dapper ORM</li>
+                        <li><strong>Frontend:</strong> React (Vite), Axios, Vanilla CSS</li>
+                        <li><strong>Veritabanı:</strong> Microsoft SQL Server</li>
+                        <li><strong>Yapay Zekâ Entegrasyonu:</strong> Google Gemini API</li>
                     </ul>
                 `
             };
