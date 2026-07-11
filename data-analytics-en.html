@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Data Analytics and Big Data Strategies | Fatma Kaplan Blog</title>
+    <meta name="description"
+        content="What is data analytics? A detailed guide on big data processing, data manipulation with Pandas, and the art of generating value from data." />
+    <meta name="keywords" content="Data Analytics, Big Data, Python Pandas, Data Visualization, Data Analytics Blog" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Data Analytics and Big Data Strategies | Fatma Kaplan Blog" />
+    <meta property="og:description" content="Explore the world of big data processing, data visualization, and analytical methods." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="assets/images/data-hero.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="blog.css?v=1.3">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="index-en.html" class="logo">Fatma <span>Kaplan</span></a>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <a href="index-en.html#blog" class="back-link"><i class='bx bx-left-arrow-alt'></i> Return to Homepage</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-post-container">
+
+        <!-- Blog Hero Section -->
+        <section class="post-header">
+            <h1 class="post-title">Data Analytics: Understanding Data</h1>
+            <div class="post-meta">March 15, 2026 &bull; Fatma Kaplan</div>
+
+            <div class="post-hero-image">
+                <img src="assets/images/data-hero.png" alt="Data Analytics and Big Data Visualization">
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="post-content">
+            <p>
+                In today's world, data is one of the most valuable corporate assets. However, raw data, just like an
+                unrefined ore, cannot show its true value until it is processed. <strong>Data analytics</strong> lies
+                at the center of the process of transforming raw data into meaningful insights and serves as the
+                compass for modern business decisions.
+            </p>
+
+            <p>
+                Analytics does not just allow us to understand what happened in the past; it also enables us to predict
+                what might happen in the future through predictive models. Python, SQL, and advanced visualization
+                tools are the main instruments of this "art of understanding."
+            </p>
+
+            <h2>Use Cases of Big Data</h2>
+            <p>Billions of data points are generated every day. Storing, processing, and analyzing this data provides
+                great advantages to businesses:</p>
+            <ul>
+                <li><strong>Customer Behavior Analysis:</strong> Understanding which products users review and what
+                    times they shop to create personalized marketing campaigns.</li>
+                <li><strong>Risk Management:</strong> Developing anomaly detection models in the financial sector that
+                    identify credit card fraud within seconds.</li>
+                <li><strong>Operational Efficiency:</strong> Determining the most optimal delivery routes in logistics
+                    networks and predicting supply chain disruptions in advance.</li>
+            </ul>
+
+            <h2>Data Extraction and Manipulation</h2>
+            <p>For a data scientist, the <code>Pandas</code> library is the heart of data manipulation. Extracting,
+                cleaning, and making messy and dirty data ready for analysis is a critical skill. Below is an example
+                of basic data loading and analysis operations:</p>
+
+            <div class="code-block">
+                <span class="code-header">PYTHON</span>
+                <code>import pandas as pd
+
+# Reading a large CSV file
+df = pd.read_csv('sales_data.csv')
+
+# Getting general information about the dataset
+print("Dataset Summary:")
+print(df.info())
+
+# Cleaning missing data (NaN)
+df_clean = df.dropna()
+
+# Grouping by a specific category (e.g., Electronics) and finding total sales
+category_sales = df_clean.groupby('Category')['Sales_Amount'].sum()
+
+print("\nTotal Sales in the Electronics Category:")
+print(category_sales['Electronics'])</code>
+            </div>
+
+            <p>
+                A few simple lines of code on a screen transform into a force that guides the billion-dollar decisions
+                of global-scale companies when integrated with technologies like PySpark or Hadoop into massive data
+                lakes.
+                Today, the sole element that rewrites the rules of competition and differentiates companies from one
+                another is this meaningful intelligence extracted from data.
+            </p>
+
+        </article>
+
+        <!-- Footer / Back Action -->
+        <footer class="post-footer">
+            <a href="index-en.html#blog" class="btn-back">
+                <i class='bx bx-left-arrow-alt'></i> Back to Blog
+            </a>
+        </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

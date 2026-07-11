@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>AI Fundamentals and the Future | Fatma Kaplan Blog</title>
+    <meta name="description"
+        content="An introduction to the world of artificial intelligence (AI): A technical analysis of machine learning, deep learning, and modern AI architectures." />
+    <meta name="keywords" content="Artificial Intelligence, AI, Machine Learning, Deep Learning, Data Science, Fatma Kaplan Blog" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Fundamentals and the Future | Fatma Kaplan Blog" />
+    <meta property="og:description" content="Fundamental concepts of artificial intelligence and projections about the future." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="assets/images/ai-hero.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="blog.css?v=1.3">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="index-en.html" class="logo">Fatma <span>Kaplan</span></a>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <a href="index-en.html#blog" class="back-link"><i class='bx bx-left-arrow-alt'></i> Return to Homepage</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-post-container">
+
+        <!-- Blog Hero Section -->
+        <section class="post-header">
+            <h1 class="post-title">Fundamentals of Artificial Intelligence</h1>
+            <div class="post-meta">March 14, 2026 &bull; Fatma Kaplan</div>
+
+            <div class="post-hero-image">
+                <img src="assets/images/ai-hero.png" alt="Artificial Intelligence and Machine Learning Visual">
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="post-content">
+            <p>
+                Artificial intelligence (AI) refers to the ability of computer systems to learn, reason, and solve
+                complex problems by mimicking human intelligence. Once viewed as an element of science fiction, AI has
+                today become a massive engineering discipline that fundamentally transforms industries, software
+                architectures, and our digital interactions.
+            </p>
+
+            <p>
+                One of the most important branches of this field, <strong>Machine Learning (ML)</strong>,
+                enables computers to detect hidden patterns in large datasets using mathematical algorithms,
+                extract rules from them, and make accurate predictions for the future. Going even deeper,
+                <strong>Deep Learning (DL)</strong> simulates the working principles of the human brain with artificial
+                neural networks, achieving extraordinary success in areas ranging from language modeling to object
+                recognition.
+            </p>
+
+            <h2>Why is it Important and Where is it Used?</h2>
+            <p>Machine learning and artificial intelligence engineering are changing how we automate the world. Thanks
+                to the advancement of processing power (GPUs) and cloud architectures, innovations like the following
+                have entered our lives:</p>
+            <ul>
+                <li><strong>Natural Language Processing (NLP):</strong> Understanding text, summarizing, and building
+                    chatbots (e.g., advanced language models, virtual assistants).</li>
+                <li><strong>Computer Vision:</strong> Enabling autonomous vehicles to perceive their environment or
+                    rapidly diagnosing diseases in medical imaging.</li>
+                <li><strong>Predictive Analytics:</strong> A wide range of market insights, from e-commerce platforms
+                    recommending products to the analysis of stock market movements.</li>
+            </ul>
+
+            <h2>Model Training: A Technical Perspective</h2>
+            <p>The building block of data science and machine learning is data cleaning and choosing the right
+                algorithms. The <code>Python</code> ecosystem (Scikit-Learn, TensorFlow, PyTorch) consists of the
+                industry-standard tools in this field. Below is a structural code snippet showing how to build a basic
+                regression model:</p>
+
+            <div class="code-block">
+                <span class="code-header">PYTHON</span>
+                <code>import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+# Sample dataset (Features: X, Output: y)
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 4, 6, 8, 10])
+
+# Splitting data into Training (80%) and Test (20%)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Initializing model and optimizing weights (fitting)
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# System's prediction based on new data
+test_value = [[6]]
+prediction = model.predict(test_value)
+
+print(f"System prediction: for X={test_value[0][0]}, y={prediction[0]:.2f}")</code>
+            </div>
+
+            <p>
+                The true value of an artificial intelligence model lies not just in its mathematics on paper, but in
+                how it performs in a live production environment.
+                Integrating algorithms into products and managing <em>AIOps</em> processes in modern architectures is
+                no longer optional, but a necessity.
+                The basic rule of shaping the digital revolution is not just to follow new technologies, but to place
+                them at the center of the applications we build.
+            </p>
+
+        </article>
+
+        <!-- Footer / Back Action -->
+        <footer class="post-footer">
+            <a href="index-en.html#blog" class="btn-back">
+                <i class='bx bx-left-arrow-alt'></i> Back to Blog
+            </a>
+        </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
