@@ -1,3 +1,5 @@
 # Ignore large media files to avoid GitHub's 100MB upload limit
 assets/portmanagement.mp4
 *.mp4
+work/
+
