@@ -1,0 +1,37 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /contacts/{contactId} {
+      allow create: if isValidContact(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    function isValidContact(contact) {
+      return contact.keys().hasAll([
+          'name', 'email', 'phone', 'subject', 'message', 'createdAt'
+        ])
+        && contact.keys().hasOnly([
+          'name', 'email', 'phone', 'subject', 'message', 'createdAt'
+        ])
+        && contact.name is string
+        && contact.name.size() >= 2
+        && contact.name.size() <= 100
+        && contact.email is string
+        && contact.email.size() >= 3
+        && contact.email.size() <= 254
+        && contact.email.matches('^[^@ ]+@[^@ ]+[.][^@ ]+$')
+        && contact.phone is string
+        && contact.phone.size() >= 7
+        && contact.phone.size() <= 30
+        && contact.subject is string
+        && contact.subject.size() >= 2
+        && contact.subject.size() <= 150
+        && contact.message is string
+        && contact.message.size() >= 10
+        && contact.message.size() <= 2000
+        && contact.createdAt is timestamp
+        && contact.createdAt == request.time;
+    }
+  }
+}

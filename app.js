@@ -1,6 +1,7 @@
 // --- Firebase Integration ---
 console.log("Haberler v1.2 yüklendi - Bilim & Teknoloji modu aktif.");
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app-check.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
@@ -16,6 +17,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const appCheckSiteKey = document
+    .querySelector('meta[name="firebase-app-check-site-key"]')
+    ?.content.trim();
+
+if (appCheckSiteKey) {
+    initializeAppCheck(app, {
+        provider: new ReCaptchaEnterpriseProvider(appCheckSiteKey),
+        isTokenAutoRefreshEnabled: true
+    });
+}
+
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
@@ -54,27 +66,58 @@ function validateEmail(email) {
         );
 }
 
+const CONTACT_LIMITS = {
+    name: { min: 2, max: 100 },
+    email: { min: 3, max: 254 },
+    phone: { min: 7, max: 30 },
+    subject: { min: 2, max: 150 },
+    message: { min: 10, max: 2000 }
+};
+
+function isWithinLimits(value, limits) {
+    return typeof value === 'string' && value.length >= limits.min && value.length <= limits.max;
+}
+
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // 1. Honeypot Check (Anti-Spam)
-        const honeypot = document.querySelector('#honeypot').value;
+        const honeypot = document.querySelector('#honeypot')?.value;
         if (honeypot) {
             console.log("Spam detected!");
             return;
         }
 
         // 2. Client-side Validation Highlights
+        const name = document.querySelector('#name').value.trim();
         const emailInput = document.querySelector('#email');
         const email = emailInput.value.trim();
+        const phone = document.querySelector('#phone').value.trim();
+        const subject = document.querySelector('#subject').value.trim();
+        const message = document.querySelector('#message').value.trim();
+        const isEnglish = document.documentElement.lang === 'en';
 
-        if (!validateEmail(email)) {
+        if (!validateEmail(email) || !isWithinLimits(email, CONTACT_LIMITS.email)) {
             emailInput.classList.add('input-error');
-            showToast("Geçerli bir e-posta adresi giriniz.", "error");
+            showToast(isEnglish ? "Please enter a valid email address." : "Geçerli bir e-posta adresi giriniz.", "error");
             return;
         } else {
             emailInput.classList.remove('input-error');
+        }
+
+        const fieldsAreValid =
+            isWithinLimits(name, CONTACT_LIMITS.name) &&
+            isWithinLimits(phone, CONTACT_LIMITS.phone) &&
+            isWithinLimits(subject, CONTACT_LIMITS.subject) &&
+            isWithinLimits(message, CONTACT_LIMITS.message);
+
+        if (!fieldsAreValid) {
+            showToast(
+                isEnglish ? "Please check the required fields and length limits." : "Lütfen zorunlu alanları ve uzunluk sınırlarını kontrol edin.",
+                "error"
+            );
+            return;
         }
 
         // 3. UI Loading State
@@ -87,11 +130,11 @@ if (contactForm) {
 
         // Get Form Data
         const formData = {
-            name: document.querySelector('#name').value.trim(),
+            name,
             email: email,
-            phone: document.querySelector('#phone').value.trim(),
-            subject: document.querySelector('#subject').value.trim(),
-            message: document.querySelector('#message').value.trim(),
+            phone,
+            subject,
+            message,
             createdAt: serverTimestamp()
         };
 
@@ -99,11 +142,14 @@ if (contactForm) {
             // Firestore'a kaydet
             await addDoc(collection(db, "contacts"), formData);
 
-            showToast("Mesajınız gönderildi, teşekkürler");
+            showToast(isEnglish ? "Thank you, your message has been sent." : "Mesajınız gönderildi, teşekkürler");
             contactForm.reset();
         } catch (error) {
             console.error("Hata oluştu: ", error);
-            showToast("Beklenmedik bir hata oluştu. Lütfen tekrar deneyin.", "error");
+            showToast(
+                isEnglish ? "An unexpected error occurred. Please try again." : "Beklenmedik bir hata oluştu. Lütfen tekrar deneyin.",
+                "error"
+            );
         } finally {
             // Restore UI State
             submitBtn.classList.remove('loading');
