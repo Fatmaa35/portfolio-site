@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="firebase-app-check-site-key" content="6LeHBpwtAAAAAITeIeUhGNpbQ-GM_5T78-4elCgP" />
     <meta name="description"
         content="Fatma Kaplan - Computer Engineer & AI / Data Science Developer Portfolio website" />
     <title>Personal Portfolio - Fatma Kaplan</title>
@@ -15,8 +16,10 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css?v=2.4" />
 
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"
+        integrity="sha384-42kyIPf7HDYLkGffmxDhSx/3Z/53wGBs3nD6wEFxsbeDc7rMO6mkYbkAcpRsnMU2" crossorigin="anonymous" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+        integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous"></script>
     <script defer src="hero-network.js?v=1.0"></script>
 </head>
 
@@ -181,7 +184,7 @@
                     <a href="#" class="prj-btn prj-details-btn" data-project="telco-churn">
                         <i class='bx bx-info-circle'></i> View Details
                     </a>
-                    <a href="https://github.com/elifep/Telco-Churn-Data-Science-Project" target="_blank" class="prj-btn">
+                    <a href="https://github.com/elifep/Telco-Churn-Data-Science-Project" target="_blank" rel="noopener noreferrer" class="prj-btn">
                         <i class='bx bxl-github'></i> View Code
                     </a>
                 </div>
@@ -207,7 +210,7 @@
                     <a href="#" class="prj-btn prj-details-btn" data-project="yolarkadasim">
                         <i class='bx bx-info-circle'></i> View Details
                     </a>
-                    <a href="https://github.com/gokdeniz001/yolarkadasim-web/tree/surum/yolarkadasim-hazir" target="_blank" class="prj-btn">
+                    <a href="https://github.com/gokdeniz001/yolarkadasim-web/tree/surum/yolarkadasim-hazir" target="_blank" rel="noopener noreferrer" class="prj-btn">
                         <i class='bx bxl-github'></i> View Code
                     </a>
                 </div>
@@ -233,7 +236,7 @@
                     <a href="#" class="prj-btn prj-details-btn" data-project="liman-yonetim">
                         <i class='bx bx-info-circle'></i> View Details
                     </a>
-                    <a href="https://github.com/Fatmaa35/PortManagementSystem" target="_blank" class="prj-btn">
+                    <a href="https://github.com/Fatmaa35/PortManagementSystem" target="_blank" rel="noopener noreferrer" class="prj-btn">
                         <i class='bx bxl-github'></i> View Code
                     </a>
                 </div>
@@ -340,23 +343,23 @@
 
         <form id="contact-form">
             <div class="input-full">
-                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="name" placeholder="Full Name" minlength="2" maxlength="100" required>
             </div>
 
             <div class="input-box">
-                <input type="email" id="email" placeholder="Email Address" required>
-                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email Address" maxlength="254" required>
+                <input type="tel" id="phone" placeholder="Phone Number" minlength="7" maxlength="30" required>
             </div>
 
             <div class="input-full">
-                <input type="text" id="subject" placeholder="Subject" required>
+                <input type="text" id="subject" placeholder="Subject" minlength="2" maxlength="150" required>
             </div>
 
             <div style="display:none !important">
                 <input type="text" id="honeypot" tabindex="-1" autocomplete="off">
             </div>
 
-            <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message" minlength="10" maxlength="2000" required></textarea>
             
             <button type="submit" class="btn" id="submit-btn">
                 <span class="btn-text">Send Message</span>
@@ -542,7 +545,7 @@
                     </p>
 
                     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 1.5rem; border: 1px solid rgba(0, 255, 204, 0.3); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); margin: 2.5rem 0;">
-                        <iframe src="https://drive.google.com/file/d/1_QmNY66cd9ydezlfHKIO2_nbhu6u33-X/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1_QmNY66cd9ydezlfHKIO2_nbhu6u33-X/preview" title="Port Management System project video" sandbox="allow-scripts allow-same-origin" allow="autoplay" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"></iframe>
                     </div>
 
                     <h3>💡 Key Features</h3>
