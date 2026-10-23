@@ -85,7 +85,9 @@ if (contactForm) {
         // 1. Honeypot Check (Anti-Spam)
         const honeypot = document.querySelector('#honeypot')?.value;
         if (honeypot) {
-            console.log("Spam detected!");
+            // Bota ipucu vermemek için sessizce başarılıymış gibi davran
+            showToast(document.documentElement.lang === 'en' ? "Thank you, your message has been sent." : "Mesajınız gönderildi, teşekkürler");
+            contactForm.reset();
             return;
         }
 
