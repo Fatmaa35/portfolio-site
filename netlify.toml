@@ -28,3 +28,35 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+
+# Eski blog adresleri yeni klasöre yönlendirilir
+[[redirects]]
+  from = "/ai-fundamentals.html"
+  to = "/blog/ai-fundamentals.html"
+  status = 301
+
+[[redirects]]
+  from = "/ai-fundamentals-en.html"
+  to = "/blog/ai-fundamentals-en.html"
+  status = 301
+
+[[redirects]]
+  from = "/data-analytics.html"
+  to = "/blog/data-analytics.html"
+  status = 301
+
+[[redirects]]
+  from = "/data-analytics-en.html"
+  to = "/blog/data-analytics-en.html"
+  status = 301
+
+[[redirects]]
+  from = "/web-development.html"
+  to = "/blog/web-development.html"
+  status = 301
+
+[[redirects]]
+  from = "/web-development-en.html"
+  to = "/blog/web-development-en.html"
+  status = 301
+

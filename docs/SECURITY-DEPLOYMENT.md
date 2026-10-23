@@ -7,6 +7,7 @@ The repository contains restrictive Firestore rules, Firebase App Check initiali
 Deploy `firestore.rules` to the `portfoy-site-4886b` Firebase project:
 
 ```powershell
+cd firebase
 firebase deploy --only firestore:rules --project portfoy-site-4886b
 ```
 
