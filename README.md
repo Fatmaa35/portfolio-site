@@ -1,6 +1,6 @@
 # Fatma Kaplan | Portföy
 
-Kişisel portföy ve teknoloji bloğu. Netlify üzerinde yayınlanır.
+
 
 ## Klasör yapısı
 
@@ -20,5 +20,3 @@ Kişisel portföy ve teknoloji bloğu. Netlify üzerinde yayınlanır.
 ├── docs/                       Güvenlik / deploy notları
 └── netlify.toml                Güvenlik başlıkları, önbellek, yönlendirmeler
 ```
-
-Firestore kurallarını yüklemek için: `cd firebase && firebase deploy --only firestore:rules`
