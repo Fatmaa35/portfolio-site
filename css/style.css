@@ -2650,3 +2650,12 @@ section.projects {
     background: transparent;
     color: var(--main-color);
 }
+
+.prj-live-note {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    color: #9aa5a3;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
