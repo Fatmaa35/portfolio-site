@@ -147,6 +147,29 @@
                     <li><strong>Database:</strong> Microsoft SQL Server</li>
                     <li><strong>AI Integration:</strong> Google Gemini API</li>
                 </ul>
+            `,
+            'mihenk': `
+                <h2>📚 Mihenk – Personalized Book Recommendation Platform</h2>
+                <p>
+                    Mihenk is a web application that analyzes users' reading habits and personal preferences to recommend books, while also letting them manage their library and track their reading.
+                </p>
+
+                <h3>💡 Key Features</h3>
+                <ul>
+                    <li><strong>Personalized Book Recommendations:</strong> Dynamic suggestions based on interests and reading history.</li>
+                    <li><strong>ISBN &amp; Barcode Lookup:</strong> Quick book entry through Open Library and Google Books integration.</li>
+                    <li><strong>Reading Tracking:</strong> Reading time, a Pomodoro timer, quote tracking, and statistics.</li>
+                    <li><strong>Price Alerts:</strong> Track book price changes and get notified.</li>
+                    <li><strong>User Management:</strong> Supabase Auth support, personal profiles, and preferences.</li>
+                </ul>
+
+                <h3>⚙️ Technologies Used</h3>
+                <ul>
+                    <li><strong>Backend:</strong> Python, FastAPI, Pydantic</li>
+                    <li><strong>Frontend:</strong> React, TypeScript, Vite</li>
+                    <li><strong>Database:</strong> SQLite / Supabase (PostgreSQL)</li>
+                    <li><strong>Testing &amp; CI:</strong> Pytest, Vitest, Playwright, GitHub Actions</li>
+                </ul>
             `
         };
 

@@ -147,6 +147,29 @@
                     <li><strong>Veritabanı:</strong> Microsoft SQL Server</li>
                     <li><strong>Yapay Zekâ Entegrasyonu:</strong> Google Gemini API</li>
                 </ul>
+            `,
+            'mihenk': `
+                <h2>📚 Mihenk – Kişiselleştirilmiş Kitap Öneri Platformu</h2>
+                <p>
+                    Mihenk, kullanıcıların okuma alışkanlıklarını ve kişisel tercihlerini analiz ederek kitap önerileri sunan, aynı zamanda kitaplık ve okuma takibi yapmayı sağlayan bir web uygulamasıdır.
+                </p>
+
+                <h3>💡 Öne Çıkan Özellikler</h3>
+                <ul>
+                    <li><strong>Kişiselleştirilmiş Kitap Önerileri:</strong> İlgi alanlarına ve okuma geçmişine göre dinamik kitap tavsiyeleri.</li>
+                    <li><strong>ISBN &amp; Barkod Sorgulama:</strong> Open Library ve Google Books entegrasyonu ile hızlı kitap ekleme.</li>
+                    <li><strong>Okuma Takibi:</strong> Okuma süreleri, Pomodoro zamanlayıcı, alıntı takibi ve istatistikler.</li>
+                    <li><strong>Fiyat Alarmı:</strong> Kitapların fiyat hareketlerini izleme ve bildirim alma.</li>
+                    <li><strong>Kullanıcı Yönetimi:</strong> Supabase Auth desteği, kişisel profil ve tercihler.</li>
+                </ul>
+
+                <h3>⚙️ Kullanılan Teknolojiler</h3>
+                <ul>
+                    <li><strong>Backend:</strong> Python, FastAPI, Pydantic</li>
+                    <li><strong>Frontend:</strong> React, TypeScript, Vite</li>
+                    <li><strong>Veritabanı:</strong> SQLite / Supabase (PostgreSQL)</li>
+                    <li><strong>Test &amp; CI:</strong> Pytest, Vitest, Playwright, GitHub Actions</li>
+                </ul>
             `
         };
 
