@@ -2639,3 +2639,14 @@ section.projects {
         height: 18rem;
     }
 }
+
+/* Canlı demo butonu */
+.prj-btn.prj-btn-live {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.prj-btn.prj-btn-live:hover {
+    background: transparent;
+    color: var(--main-color);
+}
